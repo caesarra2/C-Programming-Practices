@@ -287,6 +287,64 @@ int main()
 <br>
 <br>
 
+### Task #7 - Focusing on: Basic console input & output, String manipulation.<br>
+
+Write a program that asks the user to enter their first name and then the last name, and then construct, store and display a third string, consisting of their last name followed by a comma, a space and first name.<br>
+Use **char** arrays and functions from the 'string.h' header file.<br> 
+
+**A sample run could look like this:**<br>
+```
+Enter your first name: Flip
+Enter your second name: Fleming
+Here's the information in a single string: Fleming, Flip
+```
+
+<br>
+
+**Example Solution:**<br>
+
+<details>
+  <summary>Click to show solution</summary>
+	
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char first_name[20];
+	char last_name[20];
+
+	printf("Please enter your first name: ");
+	scanf("%s", first_name);
+
+	printf("Please enter your last name: ");
+	scanf("%s", last_name);
+
+	char full_name[50];
+
+	strcpy(full_name, last_name); // Copying last_name to the currently empty full_name string.
+	strcat(full_name, ", "); // Expanding the string with a comma and a space.
+	strcat(full_name, first_name); // Finally expanding it with the first name.
+
+	printf("Here's the information in a single string: %s", full_name);
+
+	return 0;
+}
+```
+  
+</details>
+
+-------
+
+<br>
+<br>
+
+
+
+
+
+
 
 
 
