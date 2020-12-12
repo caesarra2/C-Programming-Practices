@@ -11,8 +11,10 @@ Finally, compute your BMI by dividing your mass in kilograms by the square of yo
 
 An example what the user could see in the console:<br>
 
-```Please enter your height in feet: 5
+```
+Please enter your height in feet: 5
 Now please enter the inches: 8
 Please enter your weight in pounds: 165
 
-According to your parameters, your BMI is: 25.083613```
+According to your parameters, your BMI is: 25.083613
+```
