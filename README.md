@@ -200,10 +200,52 @@ int main()
 <br>
 <br>
 
+### Task #5 - Focusing on: Basic console output, Pointers.<br>
+
+Write a program that displays the memory addresses of the following two integers, and then prints the sum of these numbers using pointers.<br>
+
+```c
+int number1 = 3;
+int number2 = 1;
+```
+
+<br>
+
+**Example solution:**<br>
+
+<details>
+  <summary>Click to show solution</summary>
+
+```c
+#include <stdio.h>
 
 
 
+int main()
+{
+	int number1 = 3;
+	int number2 = 1;
 
+	int* ptr1 = &number1;
+	int* ptr2 = &number2;
+
+	int sum = *ptr1 + *ptr2;
+
+	printf("Address of number1: %p\n", ptr1);
+	printf("Address of number2: %p\n", ptr2);
+	printf("The sum of number1 and number2 is: %d", sum);
+
+
+	return 0;
+}
+```
+  
+</details>
+
+-------
+
+<br>
+<br>
 
 
 
