@@ -102,6 +102,66 @@ int main()
   
 </details>
 
+-----
+
+### Task #3 - Focusing on: Basic console input & output, Loops.<br>
+
+Write a program that requests the user to enter two integers. The program should then calculate and report the sum of all the integers between and including the two integers given by the user.<br>
+At this point, assume that the smaller integer is entered first. For example, if the user enters **2** and **9**, the program should report that the sum of all the integers **2** through **9** is **44**.<br>
+
+**Example solution**<br>
+
+<details>
+  <summary>Click to show solution</summary>
+
+```c
+#include <stdio.h>
+
+
+
+int main()
+{
+	int first = 0, second = 0, sum = 0;
+
+	printf("Enter the first number: ");
+	scanf("%d", &first);
+
+	printf("Enter the second number: ");
+	scanf("%d", &second);
+
+	for (int i = first; i <= second; i++)
+	{
+		sum += i;
+	}
+
+	printf("The sum of all numbers from %d through %d is %d.", first, second, sum);
+
+
+	return 0;
+}
+```
+  
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
