@@ -340,10 +340,144 @@ int main()
 <br>
 <br>
 
+### Task #8 - Focusing on: Basic console input & output, Dynamic memory allocation, Pointers, Loops.<br>
+
+Your task is to write a program that stores students' test scores(Which are integer values).<br>
+Ask the user how many student's test results they'd like to store and then using dynamic memory allocation allocate memory that can hold those values.<br>
+Then ask the user to enter the scores and store them in the previously allocated memory.<br>
+Finally the program should display the scores.<br>
+
+**A sample run could look like this:**<br>
+
+```
+Enter how many scores you'd like to store: 4
+Enter student #1's score: 67
+Enter student #2's score: 34
+Enter student #3's score: 99
+Enter student #4's score: 16
+
+The scores you've entered are the following:
+1 - 67
+2 - 34
+3 - 99
+4 - 16
+```
+<br>
+
+**Example solution:**<br>
+
+<details>
+  <summary>Click to show solution</summary>
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int amount = 0;
+	printf("Enter how many scores you'd like to store: ");
+	scanf("%d", &amount);
+
+	int* p_scores = (int*)calloc(amount, sizeof(int));
+
+	for (int i = 0; i < amount; i++)
+	{
+		printf("Enter student #%d's score: ", i + 1); // i + 1 so the user doesnt see that we start from 0, has no other purpose.
+		scanf("%d", &(*(p_scores + i)));
+	}
+
+	printf("\nThe scores you've entered are the following: ");
+
+	for (int i = 0; i < amount; i++)
+	{
+		printf("\n%d - %d", i + 1, *(p_scores + i));
+	}
+
+	free(p_scores);
+
+	return 0;
+}
+```
+  
+</details>
+
+-------
+
+<br>
+<br>
+
+### Task #9 - Focusing on: Basic console input & output, Structures, Dynamic memory allocation, Pointers.<br>
+
+William Wingate runs a pizza-analysis service. For each pizza, he needs to record the following information:<br>
+- The name of the pizza, which can consist of more than one word.
+- The diameter of the pizza(In centimeters).
+- The weight of the pizza(In grams).
+
+<br>
+
+Define a structure that can hold these informations and write a program that uses a dynamically allocated structure variable of that type.<br>
+The program should ask the user to enter each of the preceding items of information, and then the program should display that information.<br>
+
+**A sample run could look like this:**<br>
+
+```
+Enter the name of the pizza: BBQ Chicken
+Enter the diameter of the pizza in centimeters: 32
+Enter the weight of the pizza in grams: 286.8
 
 
+Pizza Info:
+Name: BBQ Chicken
+Diameter: 32 cm
+Weight: 286.800000 g
+```
 
 
+**Example solution:**<br>
+
+<details>
+  <summary>Click to show solution</summary>
+
+```c
+#include <stdio.h>
+
+struct PizzaInfo
+{
+	char name[30];
+	int diameter;
+	double weight;
+};
+
+int main()
+{
+	struct PizzaInfo* pizza = (struct PizzaInfo*)malloc(sizeof(struct PizzaInfo));
+
+	printf("Enter the name of the pizza: ");
+	fgets((*pizza).name, 30, stdin); // '(*pizza).name' is same as 'pizza->name', just a different way of expressing it.
+
+	printf("Enter the diameter of the pizza in centimeters: ");
+	scanf("%d", &((*pizza).diameter));
+
+	printf("Enter the weight of the pizza in grams: ");
+	scanf("%lf", &((*pizza).weight));
+
+	printf("\n\nPizza Info:\n");
+	printf("Name: %s\n", (*pizza).name);
+	printf("Diameter: %d cm\n", (*pizza).diameter);
+	printf("Weight: %lf g\n", (*pizza).weight);
+
+	free(pizza);
+
+	return 0;
+}
+```
+  
+</details>
+
+-------
+
+<br>
+<br>
 
 
 
