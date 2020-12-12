@@ -60,6 +60,7 @@ int main()
   
 </details>
 
+-----
 
 ### Task #2 - Focusing on: Basic console input & output, Understanding user defined functions.<br>
 
