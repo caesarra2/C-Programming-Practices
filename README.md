@@ -61,7 +61,45 @@ int main()
 </details>
 
 
+### Task #2 - Focusing on: Basic console input & output, Understanding user defined functions.<br>
 
+Write a program that has main() call a user-defined function that takes a Celsius temperature value as an argument and then returns the equivalent Fahrenheit value.<br>
+The program should request the Celsius value as input from the user and display the result as in the following example:<br>
+
+```
+Enter a Celsius value: 20
+20 degrees Celsius is 68 degrees Fahrenheit.
+```
+<br>
+
+For reference, the formula for making the conversion: **Fahrenheit = 1.8 x degrees Celsius + 32**<br>
+
+**Example solution:**<br>
+
+<details>
+  <summary>Click to show solution</summary>
+  
+  ```c
+  #include <stdio.h>
+
+double celsiusToFahrenheit(int celsius)
+{
+	return 1.8 * celsius + 32;
+}
+
+int main()
+{
+	int input = 0;
+	printf("Please enter a celsius value: ");
+	scanf("%d", &input);
+
+	printf("%d degrees Celsius is %lf degrees Fahrenheit.\n", input, celsiusToFahrenheit(input));
+
+	return 0;
+}
+```
+  
+</details>
 
 
 
