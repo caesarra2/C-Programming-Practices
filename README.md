@@ -62,6 +62,9 @@ int main()
 
 -----
 
+<br>
+<br>
+
 ### Task #2 - Focusing on: Basic console input & output, Understanding user defined functions.<br>
 
 Write a program that has main() call a user-defined function that takes a Celsius temperature value as an argument and then returns the equivalent Fahrenheit value.<br>
@@ -104,6 +107,9 @@ int main()
 
 -----
 
+<br>
+<br>
+
 ### Task #3 - Focusing on: Basic console input & output, Loops.<br>
 
 Write a program that requests the user to enter two integers. The program should then calculate and report the sum of all the integers between and including the two integers given by the user.<br>
@@ -143,8 +149,56 @@ int main()
   
 </details>
 
+--------
 
+<br>
+<br>
 
+### Task #4 - Focusing on: Basic console input & output, Loops.<br>
+
+Write a program that asks the user to type in numbers. After each entry the program should report the cumulative sum of the entries to date.<br>
+The program should terminate when the user enters **0**.<br>
+
+**A sample run could look like this:**<br>
+
+```
+Enter a number(Enter 0 to terminate): 3
+Enter a number(Enter 0 to terminate): 2
+Enter a number(Enter 0 to terminate): 0
+The sum of numbers entered: 5
+```
+
+**Example solution**<br>
+
+<details>
+  <summary>Click to show solution</summary>
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int sum = 0, input = 0;
+
+	do {
+		printf("Enter a number(Enter 0 to terminate): ");
+		scanf("%d", &input);
+		sum += input;
+
+	} while (input != 0);
+
+	printf("The sum of numbers entered: %d", sum);
+
+	return 0;
+}
+```
+  
+</details>
+
+-------
+
+<br>
+<br>
 
 
 
