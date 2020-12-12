@@ -22,7 +22,7 @@ According to your parameters, your BMI is: 25.083613
 <br>
 <br>
 
-**Example solution:**<br>
+**Possible solution:**<br>
 
 <details>
   <summary>Click to show solution</summary>
@@ -80,7 +80,9 @@ Enter a Celsius value: 20
 
 For reference, the formula for making the conversion: **Fahrenheit = 1.8 x degrees Celsius + 32**<br>
 
-**Example solution:**<br>
+<br>
+
+**Possible solution:**<br>
 
 <details>
   <summary>Click to show solution</summary>
@@ -119,7 +121,9 @@ int main()
 Write a program that requests the user to enter two integers. The program should then calculate and report the sum of all the integers between and including the two integers given by the user.<br>
 At this point, assume that the smaller integer is entered first. For example, if the user enters **2** and **9**, the program should report that the sum of all the integers **2** through **9** is **44**.<br>
 
-**Example solution**<br>
+<br>
+
+**Possible solution**<br>
 
 <details>
   <summary>Click to show solution</summary>
@@ -174,7 +178,9 @@ Enter a number(Enter 0 to terminate): 0
 The sum of numbers entered: 5
 ```
 
-**Example solution**<br>
+<br>
+
+**Possible solution**<br>
 
 <details>
   <summary>Click to show solution</summary>
@@ -219,7 +225,7 @@ int number2 = 1;
 
 <br>
 
-**Example solution:**<br>
+**Possible solution:**<br>
 
 <details>
   <summary>Click to show solution</summary>
@@ -262,7 +268,9 @@ int main()
 Declare an array of *ints* that holds the following numbers: **3, 7, 9, -11, 5, 6, 8**<br>
 Write a program that finds and displays the largest number in the array.<br>
 
-**Example solution:**<br>
+<br>
+
+**Possible solution:**<br>
 
 <details>
   <summary>Click to show solution</summary>
@@ -313,7 +321,7 @@ Here's the information in a single string: Fleming, Flip
 
 <br>
 
-**Example Solution:**<br>
+**Possible Solution:**<br>
 
 <details>
   <summary>Click to show solution</summary>
@@ -378,7 +386,7 @@ The scores you've entered are the following:
 ```
 <br>
 
-**Example solution:**<br>
+**Possible solution:**<br>
 
 <details>
   <summary>Click to show solution</summary>
@@ -447,9 +455,9 @@ Name: BBQ Chicken
 Diameter: 32 cm
 Weight: 286.800000 g
 ```
+<br>
 
-
-**Example solution:**<br>
+**Possible solution:**<br>
 
 <details>
   <summary>Click to show solution</summary>
