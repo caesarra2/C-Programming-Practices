@@ -247,11 +247,45 @@ int main()
 <br>
 <br>
 
+### Task #6 - Focusing on: Array declaration, loops.<br>
+
+Declare an array of *ints* that holds the following numbers: **3, 7, 9, -11, 5, 6, 8**<br>
+Write a program that finds and displays the largest number in the array.<br>
+
+**Example solution:**<br>
+
+<details>
+  <summary>Click to show solution</summary>
+
+```c
+#include <stdio.h>
 
 
 
+int main()
+{
+	int arr[7] = { 3, 7, 9, -11, 5, 6, 8 };
 
+	int largest = arr[0];
 
+	for (int i = 1; i < (sizeof(arr) / sizeof(int)); i++)
+	{
+		if (arr[i] > largest)
+			largest = arr[i];
+	}
+
+	printf("The largest number in the array is: %d", largest);
+
+	return 0;
+}
+```
+  
+</details>
+
+-------
+
+<br>
+<br>
 
 
 
