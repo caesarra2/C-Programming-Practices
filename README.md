@@ -22,7 +22,7 @@ According to your parameters, your BMI is: 25.083613
 <br>
 <br>
 
-*Example solution:**<br>
+**Example solution:**<br>
 
 <details>
   <summary>Click to show solution</summary>
