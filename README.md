@@ -90,7 +90,7 @@ For reference, the formula for making the conversion: **Fahrenheit = 1.8 x degre
   ```c
   #include <stdio.h>
 
-double celsiusToFahrenheit(int celsius)
+double celsiusToFahrenheit(int celsius) // Function definition
 {
 	return 1.8 * celsius + 32;
 }
@@ -240,10 +240,10 @@ int main()
 	int number1 = 3;
 	int number2 = 1;
 
-	int* ptr1 = &number1;
+	int* ptr1 = &number1; // Just a reminder, 'ptr1' is an address and '*ptr1' is the value at that address!
 	int* ptr2 = &number2;
 
-	int sum = *ptr1 + *ptr2;
+	int sum = *ptr1 + *ptr2; 
 
 	printf("Address of number1: %p\n", ptr1);
 	printf("Address of number2: %p\n", ptr2);
@@ -284,11 +284,11 @@ int main()
 {
 	int arr[7] = { 3, 7, 9, -11, 5, 6, 8 };
 
-	int largest = arr[0];
+	int largest = arr[0]; // Assigning the first element of the array
 
-	for (int i = 1; i < (sizeof(arr) / sizeof(int)); i++)
+	for (int i = 1; i < (sizeof(arr) / sizeof(int)); i++) // Notice this line!
 	{
-		if (arr[i] > largest)
+		if (arr[i] > largest) // If the (i)th element is greater than our current largest one, we change what the larest number is so far.
 			largest = arr[i];
 	}
 
@@ -400,9 +400,9 @@ int main()
 	printf("Enter how many scores you'd like to store: ");
 	scanf("%d", &amount);
 
-	int* p_scores = (int*)calloc(amount, sizeof(int));
+	int* p_scores = (int*)calloc(amount, sizeof(int)); // Allocating 'amount' blocks of memory, each has the size of an int.
 
-	for (int i = 0; i < amount; i++)
+	for (int i = 0; i < amount; i++) // We loop 'amount' times
 	{
 		printf("Enter student #%d's score: ", i + 1); // i + 1 so the user doesnt see that we start from 0, has no other purpose.
 		scanf("%d", &(*(p_scores + i)));
@@ -465,7 +465,7 @@ Weight: 286.800000 g
 ```c
 #include <stdio.h>
 
-struct PizzaInfo
+struct PizzaInfo // struct definition
 {
 	char name[30];
 	int diameter;
@@ -474,7 +474,7 @@ struct PizzaInfo
 
 int main()
 {
-	struct PizzaInfo* pizza = (struct PizzaInfo*)malloc(sizeof(struct PizzaInfo));
+	struct PizzaInfo* pizza = (struct PizzaInfo*)malloc(sizeof(struct PizzaInfo)); // Allocating memory that's large enough to hold a 'PizzaInfo' struct.
 
 	printf("Enter the name of the pizza: ");
 	fgets((*pizza).name, 30, stdin); // '(*pizza).name' is same as 'pizza->name', just a different way of expressing it.
